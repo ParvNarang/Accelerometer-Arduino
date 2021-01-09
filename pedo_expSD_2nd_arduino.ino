@@ -1,6 +1,8 @@
 //This is the program made for the BNS(Blind Navigation System)
 //This uses the SD card module and accelerometer which helps in reaching the blind person to reach his/her destination.
-
+/*
+Developer - Parv Narang
+*/
 
 #include "SD.h"
 #include "TMRpcm.h"
@@ -38,11 +40,8 @@ void setup()
   k = 0;
 }
 
-
-
 void loop()
 {
-
 
   if (Serial.available())
   {
@@ -54,8 +53,6 @@ void loop()
     Serial.println();
 
   }
-
-
 
   if (digitalRead(2) == 0 && digitalRead(3) == 0 && digitalRead(4) == 0)
   {
@@ -78,24 +75,18 @@ void loop()
     delay(50);
   }
 
-
 }
 
 void norouteselected()
-
 {
 
   tmrpcm.setVolume(6);
   tmrpcm.play("slctrt.wav");
   delay(7000);
 
-
 }
 
-
-
 void routehospital()
-
 {
   for (; j < 1; j++)
   {
@@ -140,10 +131,7 @@ void routehospital()
 
 }
 
-
-
 void routemarket()
-
 {
   for (; j < 1; j++)
   {
@@ -189,8 +177,6 @@ void routemarket()
 
 }
 
-
-
 void routetemple()
 
 {
@@ -234,6 +220,5 @@ void routetemple()
     delay(2100);
     reached = 1;
   }
-
 
 }
