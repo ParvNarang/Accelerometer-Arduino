@@ -1,6 +1,8 @@
 //This is the program made for the BNS(Blind Navigation System)
 //This uses the SD card module and accelerometer which helps in reaching the blind person to reach his/her destination.
-
+/*
+Developer - Parv Narang
+*/
 
 #include <Servo.h>
 int btnup = 2;
