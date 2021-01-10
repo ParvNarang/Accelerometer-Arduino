@@ -25,8 +25,6 @@ void setup()
   pinMode(2, INPUT);
   pinMode(4, INPUT);
 
-
-
   tmrpcm.speakerPin = 9;
 
   if (!SD.begin(SD_ChipSelectPin))
@@ -174,7 +172,6 @@ void routemarket()
     reached = 1;
   }
 
-
 }
 
 void routetemple()
@@ -189,7 +186,6 @@ void routetemple()
 
   if (steps == 5)
   {
-
     Serial.println("Turn right");
     tmrpcm.setVolume(6);
     tmrpcm.play("tr.wav");
@@ -220,5 +216,4 @@ void routetemple()
     delay(2100);
     reached = 1;
   }
-
 }
