@@ -1,10 +1,9 @@
-//This is the program made for the BNS(Blind Navigation System)
-//This uses the SD card module and accelerometer which helps in reaching the blind person to reach his/her destination.
 /*
 Developer - Parv Narang
 */
 
 #include <Servo.h>
+
 int btnup = 2;
 int btndn = 3;
 Servo servoone,servotwo;
@@ -18,18 +17,18 @@ int sd1 = 11;
 int sd2 = 12;
 int sd3 = 13;
 int btnprscntup;
+
 void setup()
 {
 pinMode(btnup,INPUT_PULLUP);
 pinMode(btndn,INPUT_PULLUP);
+
 pinMode(8,OUTPUT);
 pinMode(9,OUTPUT);
 pinMode(10,OUTPUT);
   
 pinMode(11,OUTPUT);
 pinMode(12,OUTPUT);
-
-
   
 Serial.begin(9600);
 Serial.begin(9600);
@@ -47,6 +46,7 @@ void loop()
 /*Serial.print("\t");
 Serial.println();
 delay(100);*/
+
 digitalWrite(11,0);
 digitalWrite(12,0);
 btnprsup= digitalRead(btnup);
@@ -57,10 +57,12 @@ if(btnprsup==0)
   digitalWrite(11,1);
   btnprscntup++;
   delay(100);
+  
   if(btnprscntup>=3)
   {
     btnprscntup=3;
   }
+  
 }
 if(btnprsdn==0)
 {
@@ -105,9 +107,7 @@ if(count1==1 && count2==1)
   Serial.println();
   delay(1000);
   }
-
 }
-
 
 //Serial.println(rtslct);
 //Serial.println(btnprsup);
@@ -152,15 +152,11 @@ else if(rtslct==3)
   
 }
 
-
-
-
 void norouteselected()
 
 { 
           delay(50);         
 }
-
 
 //Routes are assigned here manually where the blind person has to go
 //In this case it is hospital, market and temple. You can add any route either to your room or any other place but just observing the steps in every case.
