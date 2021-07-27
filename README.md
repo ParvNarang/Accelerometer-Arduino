@@ -1,3 +1,3 @@
 # Navigation_System
-Code for the Blind Navigation System using Arduino.
-A blind navigation system for a blind person to reach his/her destination.
+Code for the Navigation System using Arduino.
+A navigation system for fixed paths to reach the destination.
